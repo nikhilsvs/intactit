@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&display=swap');
+*{
+  font-family: "Nunito";
+}
+header{
+  background-image: url("./shared/images/header3.jpg");
+  height:100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.home{
+  font-family: "Nunito";
+}
+.overlay{
+  height:100%;
+  width:100%;
+  background-color:rgba(0.31,0.31,0.31,0.8);
+}
+.navbar{
+  width:100%;
+  font-family: "Nunito";
+  
+}
+.navbar-dark {
+
+  background-color: transparent;
+  
+}
+
+.navbar-dark.scrolled{
+  background-color: #d9381e;
+  
+
+}
+.navbar .navbar-brand{
+  color:whitesmoke;
+}
+.navbar .navbar-collapse .navbar-nav .nav-item a{
+  color:whitesmoke;
+}
+.customalign{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.lowerOverlay{
+
+  background-color:rgba(0.31,0.31,0.31,0.5);
+  
+}
+.temp1{
+  width:100%;
+  height:100%;
+  color:whitesmoke;
+  font-family: "Nunito";
+}
+.temp1 h2{
+  color:#d9381e;
+  font-weight: bolder;
+  font-size: 70px;
+
+}
+.rightQuote {
+  font-size: 30px;
+  font-weight: bolder;
+  color:#d9381e;
+}
+.rightQuote h3{
+  font-size: 30px;
+  font-weight: bolder;
+  color:whitesmoke;
+}
+.btn.btn-outline.btn-contact{
+  background-color: #d9381e;
+  color:whitesmoke;
+  border-color: #d9381e;
+}
+.btn.btn-outline.btn-contact:hover{
+  background-color: transparent;
+  color:#d9381e;
+  border-color: #d9381e;
+}
+.my-menu .ant-menu{
+  background: transparent;
+}
+.content{
+  color:whitesmoke;
+}
+.antd-menu{
+  background: transparent;
+}
+.clients{
+  padding-top:50px;
+  padding-bottom:50px;
+}
+.cardContent{
+  color:#ef9f43;
+}
+
+.whatwedo{
+  background-image: url("./shared/images/carousel_overlay.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:60vh;
+}
+
+.homeServicesContent{
+  color:whitesmoke;
+}
+.intro{
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+.heartrow{
+  height:70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.clienticon{
+  font-size: 200px;
+  color:darkred;
+}
+footer{
+  background-color: black;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-family: "Nunito";
+}
+.list1{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+}
+.list2{
+  text-decoration: none;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  margin-top:10px;
+}
+.address1{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  text-align:justify;
+  justify-content: space-around;
+  color:#ef9f43;
+}
+.listitem{
+  font-size: 30px;
+}
+/* Aboutus*/
+.aboutusTop{
+  margin-top:100px;
+  font-family: "Nunito";
+}
+.aboutusHeading{
+  font-size: 30px;
+  color:black;
+;
+}
+.aboutusHeaderLeft{
+  margin-top:60px;
+  font-family: "Nunito"
+}
+/*OurService*/
+.servicesHeader{
+  height:50vh;
+}
+.ourservices{
+  margin:20px;
+  font-family: "Nunito";
+}
+
+.carousel .carousel-item .aboutusFeedback{
+  height: 200px; 
+  background-color:#679267;
+}
+.feedback{
+  height:50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Nunito";
+}
+.media-body{
+  height:100%;
+  color:whitesmoke;
+  margin-top: 30px;
+ 
+
+}
+/*Services*/
+.servicesSection{
+  margin-top: 0px;
+
+}
+.card-carousel-style{
+     
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display:flex;
+  flex: 1;
+  justify-content: center;
+  align-items: middle;
+}
+.cardCarousel-Item{
+      height: 400px;
+      width: 300px;
+     
+      text-align: center;
+      background-color: #679267;
+      color: #FFF;
+      font-family: "sans-serif";
+      font-size: 12px;
+      text-transform: uppercase;
+      border-radius: 10px;
+      box-sizing: border-box;
+      font-family: "Nunito";
+}
+.servicesHeader{
+  background-image: url("./shared/images/servicesHeader.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color:whitesmoke;
+}
+.aboutusHeader{
+  background-image: url("./shared/images/aboutusHeader1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color:whitesmoke;
+  height: 70vh;
+}
+.headerRow{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+}
+.contactusSection{
+  background-image: url("./shared/images/contactHeader.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color:whitesmoke;
+  height: 50vh;
+}
+.contactusContent{
+  margin-top:10px;
+  margin-bottom: 20px;;
+}
+.sectionRow{
+  margin-top:20px;
+  margin-bottom: 20px;
+  font-family: "Nunito";
+}
+.fa-address-card{
+  font-size: 50px;
+  color:#ef9f43;
+  margin-left: 20px;
+}
+.formrow{
+  margin-top:20px;
+}
+/*Home Into*/
+.intro{
+  height:80vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+}
+.homeServies{
+  height:40vh;
+}
+.whatwedo .carousel{
+  height:80%;
+}
+.whatwedo .carousel .carousel-inner{
+  height:80%;
+} 
+.whatwedo .carousel .carousel-inner .carousel-item{
+  height:80%;
+} 
+.carouselHeading{
+  padding-top:20px;
+  color:#d9381e;
+}
+.aboutusHeader2{
+  color:#d9381e;
+}
+.homeSec2Content{
+  height:100px;
+}
+.homeSec2Content h3{
+  margin-left:auto;
+}
+.homeIcon{
+  position: absolute;
+  left:0%;
+  top:0px;
+}
+.homeSec2Content h3 i{
+  color:#d9381e;
+  font-size:50px;
+}
+/*Clients aboutus*/
+.aboutusClients{
+  background-image: url("./shared/images/aboutus_clients_overlay.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.clientName{
+  position:absolute;
+  color:whitesmoke;
+  top:0px;
+  left:0px;
+  height:100%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  opacity: 0;
+  transition: all 1s;
+  -o-transition: all 1s;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+}
+.aboutusClients{
+  color:whitesmoke;
+}
+.clientItem:hover .clientName{
+  opacity: 1;
+}
+.clientItem:hover .clientImg img{
+  opacity: 0;
+}
+.clientsTitle div h2{
+  padding-top:30px;
+  font-size: 40px;
+}
+.whoWeAre{
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+ 
+}
+.whoWeAreInner{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.whoWeAreCard{
+  background-color: black;
+  color:whitesmoke;
+}
+.whoWeAreTbtn{
+  background-color: transparent;
+  border-color: whitesmoke;
+  color:whitesmoke;
+}
+.whoWeAreTbtn:hover{
+  color:black;
+  background-color: whitesmoke;
+}
+.addressTitle{
+  font-size: 30px;
+}
