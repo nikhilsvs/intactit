@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+// import 'antd/dist/antd.css';
 import Main from './components/mainComponent';
 import {BrowserRouter} from 'react-router-dom';
 

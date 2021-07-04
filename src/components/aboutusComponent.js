@@ -1,35 +1,35 @@
 import React ,{Component} from 'react';
 import {Card,CardBody,CardHeader,CardImg,CardText,CardTitle,Media,UncontrolledCollapse,Button} from 'reactstrap';
 import {Carousel} from 'react-bootstrap';
+import {Card as ACard} from 'antd';
+// import 'antd/dist/antd.css';
 import {NavLink} from 'react-router-dom';
+const { Meta } = ACard;
 
 function RenderClients(){
     let temp = [{
-                name: "Software Development",
-                img:"images/sdeaboutus.jpg"
+                name: "Haryana Cooperative bank",
+                img:"images/banklogo.png"
                 },
                 {
-                    name: "Services",
-                    img:"images/services.jpg"
+                    name: "Haryana Cooperative bank",
+                    img:"images/banklogo.png"
                 },
                 {
-                    name: "Staffing",
-                    img:"images/stafing.jpg"
+                    name: "Haryana Cooperative bank",
+                    img:"images/banklogo.png"
                 },
                 {
-                    name: "Software Development",
-                    desc:'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq',
-                    img:"images/staffing2.png"
+                    name: "Haryana Cooperative bank",
+                    img:"images/banklogo.png"
                 },
                 {
-                    name: "Services",
-                    desc:'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq',
-                    img:"images/sde2.png"
+                    name: "Haryana Cooperative bank",
+                    img:"images/banklogo.png"
                 },
                 {
-                    name: "Staffing",
-                    desc:'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq',
-                    img:"images/logo.png"
+                    name: "Haryana Cooperative bank",
+                    img:"images/banklogo.png"
                 }
                 ];
 
@@ -38,11 +38,11 @@ function RenderClients(){
         return(
             <div className="col-md-3">
                 <div className="clientItem">
-                    <div className="clientImg">
-                        <img src = {item.img} width="100%" height="100%"/>
+                    <div className="clientImg text-center">
+                        <img src = {item.img} width="50%" height="50%"/>
                     </div>
-                    <div className="clientName">
-                        <h2>{item.name}</h2>
+                    <div className="clientName text-center">
+                        <h6>{item.name}</h6>
                     </div>
                 </div>
             </div>
@@ -77,19 +77,13 @@ function RenderServices(){
         a.push(
             <div className="col-md-4">
                 <Card>
-           
-                    <CardImg  src={temp[i].img} width="100%" height="200px"/>
-                        <CardBody>
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <CardTitle><strong>{temp[i].name}</strong></CardTitle>
-                                    <CardText>{temp[i].desc}</CardText>
-                                </div>
-                                
-                            </div>
-                            
-                        </CardBody>
+                    <CardImg src = {`${temp[i].img}`}/>
+                    <CardBody>
+                        {`${temp[i].desc}`}
+                    </CardBody>
+
                 </Card>
+               
             </div>
             
         )
@@ -103,11 +97,38 @@ class About extends Component{
     constructor(props){
         super(props);
 
+        this.state = {
+            customers: 0
+        }
+
+        this.incCounter = this.incCounter.bind(this);
+        this.checkLocation = this.checkLocation.bind(this);
     }
 
+    incCounter(maxVal = 100){
 
+        setInterval(()=>{
+
+            if(maxVal == this.state.customers)
+            {
+                return;
+            }
+            this.setState({
+                customers : this.state.customers+1
+            });
+        },100);
+    }
+
+    checkLocation(){
+        console.log(window.scrollY);
+        if(window.scrollY>=300)
+        {
+            this.incCounter();
+        }
+    }
     render(){
 
+        window.addEventListener('scroll',this.checkLocation)
         return(
             <>
             <section className="aboutusHeader">
@@ -136,7 +157,47 @@ class About extends Component{
         
           </section>
             
-      
+        <section className="overview">
+            <div className = "container">
+                <div className="row">
+                    <div className="col-md-6">
+                        <h2>Overview</h2>
+                        <p>
+                        Infosys is a global leader in next-generation
+                        digital services and consulting. We enable
+                        clients in more than 50 countries to navigate
+                        their digital transformation.
+                        </p>
+                    </div>
+                    <div className="col-md-6">
+                        <p>
+                        With nearly four decades of experience in managing the systems and
+                        workings of global enterprises, we expertly steer our clients through their
+                        digital journey. We do it by enabling the enterprise with an AI-powered
+                        core that helps prioritize the execution of change. We also empower the
+                        business with agile digital at scale to deliver unprecedented levels of
+                        performance and customer delight. Our always-on learning agenda drives
+                        their continuous improvement through building and transferring digital
+                        skills, expertise, and ideas from our innovation ecosystem.
+                        </p>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-4 text-center">
+                        <h1>{this.state.customers}+</h1>
+                        <p>Custormers</p>
+                    </div>
+                    <div className="col-md-4 text-center">
+                        <h1>{this.state.customers}+</h1>
+                        <p>Good Feebacks</p>
+                    </div>
+                    <div className="col-md-4 text-center">
+                        <h1>{this.state.customers}+</h1>
+                        <p>Cities</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <div className="container">
                 <div className="row">
                     
@@ -281,6 +342,7 @@ class About extends Component{
                     <div className="row clientsTitle">
                         <div className="col-md-12 text-center align-self-center">
                             <h2>Clients</h2>
+                            <cite>Hover over the logos</cite>
                         </div>
                     </div>
                     <div className="row sectionRow">
