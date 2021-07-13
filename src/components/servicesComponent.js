@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import ReactCardCarousel from 'react-card-carousel';
-
+import {Modal,ModalHeader,ModalBody} from 'reactstrap';
 
 class Services extends Component{
 
@@ -18,12 +18,42 @@ class Services extends Component{
                             fontSize: '12px',
                             textTransform: 'uppercase',
                             borderRadius: '10px',
-                        }
-        }
-     
+                        },
+            isSoftModalOpen : false,
+            isStaffingModalOpen : false,
+            isServicesModalOpen : false
+
+        };
+
+        this.toggleSoftModal = this.toggleSoftModal.bind(this);
+        this.toggleServicesModal = this.toggleServicesModal.bind(this);
+        this.toggleStaffingModal = this.toggleStaffingModal.bind(this);
+        this.toggleModal = this.toggleModal.bind(this);
     }
 
-  
+    toggleSoftModal(){
+        this.setState({
+            isSoftModalOpen:!this.state.isSoftModalOpen
+        });
+    }
+    toggleStaffingModal(){
+        this.setState({
+            isStaffingModalOpen:!this.state.isStaffingModalOpen
+        });
+    }
+    toggleServicesModal(){
+        this.setState({
+            isServicesModalOpen:!this.state.isServicesModalOpen
+        });
+    }
+
+    toggleModal(){
+        this.setState({
+            isServicesModalOpen:false,
+            isSoftModalOpen:false,
+            isStaffingModalOpen:false
+        });
+    }
 
     render(){
 
@@ -67,6 +97,21 @@ class Services extends Component{
         ];
     
         let ans = a.map((item)=>{
+
+            let btn = null;
+
+            if(item.name == "Services")
+            {
+                btn = this.toggleServicesModal;
+            }
+            else if(item.name == "Software Development")
+            {
+                btn = this.toggleSoftModal;
+            }
+            else if(item.name == "Staffing")
+            {
+                btn = this.toggleStaffingModal;
+            }
             return(
                 <div className="cardCarousel-Item">
                    
@@ -79,7 +124,8 @@ class Services extends Component{
                             </div>
                             
                         </p>
-                        <button className="btn btn-dark ">Know More</button>
+
+                        <button className="btn btn-dark " onClick={btn}>Know More</button>
                     
                    
                 </div>
@@ -87,18 +133,19 @@ class Services extends Component{
            
         });
         return(
+            <>
             <section className="servicesSection">
                 <div className="servicesHeader">
                     <div className="overlay">
                     <div className="headerRow">
                         <div className="container">
                             <div className="row">
-                                <div className ="col-12 col-md-6 text-center align-self-center">
+                                <div className ="col-12 col-md-12 text-center align-self-center">
                                     <h1>Our Services</h1>
                                 </div>
-                                <div className="col-12 col-md-6 d-none d-md-block">
+                                {/* <div className="col-12 col-md-6 d-none d-md-block">
                                     <img src="images/pic1.jpg" width="300px"/>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                            
@@ -108,7 +155,11 @@ class Services extends Component{
                     
                
                  <div className="container">
-                    
+                    <div className="row " style={{height:"20vh"}}>
+                        <div className="col-md-12 text-center mt-auto">
+                            <h1 style = {{color:"#d9381e"}}>One of the Leading services provider</h1>
+                        </div>
+                    </div>
                     <div className="row">
                         <div className="col-md-6">
                             <div className="card-carousel-style">
@@ -119,20 +170,51 @@ class Services extends Component{
                        
                         </div>
                         <div className="col-md-6 text-center align-self-center">
-                            <h2><cite>One of the Leading services provider</cite></h2>
-                            <h4>ffffffffffffffffffffffffffffffffffffff
-                                fffffffffffffffffffffffffffffffffffffff
-                                ffffffffffffffffffffffffffffffffffffffff
-                                fffffffffffffffffffffffffffffffffffffffff
-                                fffffffffffffffffffffffffffffffffffffffff
-                                fffffffffffffffffffffffffffffffffffffffff
-                                fffffffffffffffffffffffffffffffffff
-                            </h4>
+                            <img src="images/pic1.jpg" width="400px"/>
                         </div>
                     </div>
                 </div>
             </section>
-           
+            <Modal isOpen={this.state.isSoftModalOpen}>
+                <ModalHeader toggle={this.toggleModal}>
+                    <h2 style = {{color:"#d9381e"}}>
+                        Software Development
+                    </h2>
+                </ModalHeader>
+                <ModalBody>
+                    ppppppppppppppppppppppppppppppppppppppppppppppppp
+                    pppppppppppppppppppppppppppppppppppppppppppppppppp
+                    pppppppppppppppppppppppppppppppppppppppppppppppppp
+                    ppppppppppppppppppppppppppppppppppppppppppppppp
+                </ModalBody>
+            </Modal>
+            <Modal isOpen={this.state.isStaffingModalOpen}>
+                <ModalHeader toggle={this.toggleModal}>
+                    <h2 style = {{color:"#d9381e"}}>
+                        Staffing
+                    </h2>
+                </ModalHeader>
+                <ModalBody>
+                    ppppppppppppppppppppppppppppppppppppppppppppppppp
+                    pppppppppppppppppppppppppppppppppppppppppppppppppp
+                    pppppppppppppppppppppppppppppppppppppppppppppppppp
+                    ppppppppppppppppppppppppppppppppppppppppppppppp
+                </ModalBody>
+            </Modal>
+            <Modal isOpen={this.state.isServicesModalOpen}>
+                <ModalHeader toggle={this.toggleModal}>
+                    <h2 style = {{color:"#d9381e"}}>
+                        Services
+                    </h2>
+                </ModalHeader>
+                <ModalBody>
+                    ppppppppppppppppppppppppppppppppppppppppppppppppp
+                    pppppppppppppppppppppppppppppppppppppppppppppppppp
+                    pppppppppppppppppppppppppppppppppppppppppppppppppp
+                    ppppppppppppppppppppppppppppppppppppppppppppppp
+                </ModalBody>
+            </Modal>
+           </>
         )
     }
 

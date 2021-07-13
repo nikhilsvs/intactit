@@ -35,7 +35,7 @@ class Header extends Component{
         event.preventDefault();
     }
     changeBackground(){
-        console.log(window.scrollY);
+    
         if(window.scrollY>=100){
             this.setState({
                 isScrolled:true
@@ -70,11 +70,11 @@ class Header extends Component{
                             <div className="container">
                                 <NavbarToggler onClick={this.toggleNav} />
 
-                                <NavbarBrand className="mr-auto ml-4" href="/">
-                                    Intact IT
+                                <NavbarBrand className="mr-auto text-center" href="/" style = {{color:"#d9381e"}}>
+                                    <img src="images/logo.png" width="30%"/> Intact IT
                                 </NavbarBrand>
-                                <Collapse isOpen={this.state.isNavOpen} navbar >
-                                    <Nav navbar className="mr-auto">
+                                <Collapse isOpen={this.state.isNavOpen} navbar ml-auto>
+                                    <Nav navbar className="ml-auto">
                                         <NavItem>
                                             <NavLink className="nav-link" to="/home">
                                                 Home

@@ -10,11 +10,41 @@ header{
   background-size: cover;
   background-repeat: no-repeat;
 
+  animation-name: animate;
+  animation-direction: alternate-reverse;
+  animation-duration: 30s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+
 }
 
-/* .home{
+@keyframes animate {
+  
+  0%{
+    background-image: url('../src/shared/images/header6.jpg');
+  }
+  20%{
+    background-image: url('../src/shared/images/header2.jpg');
+  }
+  40%{
+    background-image: url('../src/shared/images/header1.jpg');
+  }
+  60%{
+    background-image: url('../src/shared/images/header4.jpg');
+  }
+  80%{
+    background-image: url('../src/shared/images/header5.jpg');
+  }
+  100%{
+    background-image: url('../src/shared/images/header3.jpg');
+  }
+}
+
+.home{
   font-family: "Nunito";
-} */
+}
 .overlay{
   height:100%;
   width:100%;
@@ -32,7 +62,7 @@ header{
 }
 
 .navbar-dark.scrolled{
-  background-color: #d9381e;
+  background-color: black;
   
 
 }
@@ -51,6 +81,8 @@ header{
 }
 .lowerOverlay{
 
+  height:100%;
+  width:100%;
   background-color:rgba(0.31,0.31,0.31,0.5);
   
 }
@@ -65,6 +97,24 @@ header{
   font-weight: bolder;
   font-size: 70px;
 
+}
+.whatwedo1{
+  background-image: url("./shared/images/carousel_overlay.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.sec2Home{
+  height:90vh;
+}
+.info{
+  height : 80vh;
+}
+.infoInner{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
 }
 .rightQuote {
   font-size: 30px;
@@ -171,13 +221,16 @@ footer{
 ;
 }
 .aboutusHeaderLeft{
-  margin-top:60px;
   font-family: "Nunito"
 }
 
 /*OurService*/
 .servicesHeader{
   height:50vh;
+  background-image: url('./shared/images/servicesOverlayImg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .ourservices{
   margin:20px;
@@ -189,11 +242,15 @@ footer{
   background-color:#679267;
 }
 .feedback{
-  height:50vh;
+  height:100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   font-family: "Nunito";
+}
+.feedback i{
+  font-size: 50px;
+  color:#d9381e;
 }
 .media-body{
   height:100%;
@@ -201,6 +258,39 @@ footer{
   margin-top: 30px;
  
 
+}
+.overview{
+  height:70vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+}
+/* What we do */
+.whatwedo{
+  height:100vh;
+  background-image: url('./shared/images/whatwedo2.jpg');
+}
+.whatwedoInner{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+}
+.ourservices .osinner{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+}
+/* aboutus our service */
+.ourservices{
+  height:80vh;
+}
+.ourservices .osinner .ourservicesHeading i{
+  font-size: 50px;
+  color:#d9381e;
 }
 /*Services*/
 .servicesSection{
@@ -232,7 +322,6 @@ footer{
       font-family: "Nunito";
 }
 .servicesHeader{
-  background-image: url("./shared/images/servicesHeader.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color:whitesmoke;
@@ -319,6 +408,7 @@ footer{
 }
 /*Clients aboutus*/
 .aboutusClients{
+  height:100vh;
   background-image: url("./shared/images/aboutus_clients_overlay.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -349,6 +439,9 @@ footer{
 }
 .clientItem:hover .clientImg img{
   opacity: 0;
+}
+.clientItemU{
+  margin-top: 20px;
 }
 .clientsTitle div h2{
   padding-top:30px;

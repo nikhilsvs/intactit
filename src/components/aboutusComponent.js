@@ -36,7 +36,7 @@ function RenderClients(){
     let ans = temp.map((item)=>{
 
         return(
-            <div className="col-md-3">
+            <div className="col-md-3 clientItemU">
                 <div className="clientItem">
                     <div className="clientImg text-center">
                         <img src = {item.img} width="50%" height="50%"/>
@@ -198,41 +198,56 @@ class About extends Component{
                 </div>
             </div>
         </section>
-        <div className="container">
+        <section className="whatwedo">
+            <div className="overlay">
+            <div className="container whatwedoInner" style={{height:"100%"}}>
                 <div className="row">
-                    
-                    <div className="col-md-6 align-self-center">
-                    <div className="aboutusHeaderLeft mt-10">
-                    <h2 className="aboutusHeading">What we Do ?</h2>
-                        <Card>
-                            <CardBody>
-                            pppppppppppppppppppppppppppppppppppp
-                            qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                            wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-                            cccccccccccccccccccccccccccccccccccc
-                            ddddddddddddddddddddddddddddddddddddd
-                            fffffffffffffffffffffffffffffffffffff
-                            pppppppppppppppppppppppppppppppppppp
-                            qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                            wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-                            cccccccccccccccccccccccccccccccccccc
-                            ddddddddddddddddddddddddddddddddddddd
-                            fffffffffffffffffffffffffffffffffffff
-                            </CardBody>
-                        </Card>
-                    </div>
-                    </div>
-                    <div className="col-md-6">
-                        <img src="images/pic1.png" width="100%"/>
+                    <div className="col-md-12 text-center">
+                        <img src = "images/logo.png"/>
                     </div>
                 </div>
-               
+                    <div className="row" >
+                        
+                        <div className="col-md-6">
+                            <div className="aboutusHeaderLeft">
+                            <h2 className="aboutusHeading" style={{color:"#d9381e",fontSize:"50px"}}>What we Do ?</h2>
+                                <h6 style={{color:"white"}}>
+                                    pppppppppppppppppppppppppppppppppppp
+                                    qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+                                    wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+                                    cccccccccccccccccccccccccccccccccccc
+                                    ddddddddddddddddddddddddddddddddddddd
+                                    fffffffffffffffffffffffffffffffffffff
+                                    pppppppppppppppppppppppppppppppppppp
+                                    qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+                                    wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+                                    cccccccccccccccccccccccccccccccccccc
+                                    ddddddddddddddddddddddddddddddddddddd
+                                    fffffffffffffffffffffffffffffffffffff
+                                </h6>
+                                    
+                                    
+                            </div>
+                        </div>
+                        <div className="col-md-6 text-center align-self-center">
+                           <h1 style={{color:"#d9381e"}}>Visit our Services Section</h1>
+                           <btn className="btn btn-outline-primary">Know More</btn>
+                        </div>
+                    </div>
+                
+                </div>
             </div>
+
+        </section>
+
             <section className="whoWeAre">
                 <div className="container whoWeAreInner">
                     <div className="row">
                         <div className="col-md-12 text-center align-self-center">
-                            <h1>Who We Are <i className="fa fa-question"/></h1>
+                            <h1 style = {{
+                                color:"#d9381e"
+                            }}>
+                            Who We Are <i className="fa fa-question"/></h1>
                         </div>
                     </div>
                     <div className="row ">
@@ -324,11 +339,14 @@ class About extends Component{
                 </div>
             </section>
 
-             <section className="ourservices">
-             <div className="container">
+            <section className="ourservices">
+             <div className="container osinner">
                  <div className="row">
                      <div className="col-md-12 text-center">
-                         <h2>Our Services</h2>
+                         <h1 className="ourservicesHeading"  style = {{
+                                color:"#d9381e"
+                            }}
+                            >Our Services <i className="fa fa-desktop"/></h1>
                      </div>
                  </div>
                  <div className="row">
@@ -341,11 +359,15 @@ class About extends Component{
                 <div className="container">
                     <div className="row clientsTitle">
                         <div className="col-md-12 text-center align-self-center">
-                            <h2>Clients</h2>
+                            <h2  
+                            style = {{
+                                color:"#d9381e"
+                            }}
+                            >Clients</h2>
                             <cite>Hover over the logos</cite>
                         </div>
                     </div>
-                    <div className="row sectionRow">
+                    <div className="row sectionRow text-center align-self-center">
                         <RenderClients/>
                     </div>
                 </div>
@@ -356,7 +378,14 @@ class About extends Component{
              <div className="container">
                  <div className="row">
                      <div className="col-md-12 text-center">
-                         <h2>Our FeedBack From Clients</h2>
+                         <h2><i className="fa fa-comments"/> Our FeedBack From Clients</h2>
+                         <blockquote>
+                             We are committed to provide the best experience to our clients
+                             qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+                             qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+                             qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+                         </blockquote>
+                         <cite>Director of Intact IT</cite>
                      </div>
                  </div>
                  </div>

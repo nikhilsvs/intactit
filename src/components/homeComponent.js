@@ -7,6 +7,8 @@ import {Navbar,NavbarBrand,Jumbotron,Nav,NavbarToggler,Collapse,NavItem,Modal,Mo
 import AliceCarousel from 'react-alice-carousel';
 import {NavLink} from 'react-router-dom';
 
+
+
 function RenderClients(){
     let a = ["ABC","XVX","YYYYYYYY","IIIIIIIIII","OOOOOOOOO","PPPPPPPPPP"];
 
@@ -27,7 +29,7 @@ function RenderClients(){
         <div className="container">
             <div className="row">
                 <div className="col-md-12 text-center">
-                    <h1 >Our Clients</h1>
+                    <h1 style={{color:"#d9381e"}}>Our Clients</h1>
                 </div>
             </div>
             <div className="row">
@@ -107,10 +109,12 @@ class Home extends Component{
  
     render(){
 
+      
+
         return(
             <>
             <section className="home">
-                <header>
+                <header id ="homeHeader">
             
                     <div className="overlay ">
                     <div className="container customalign">
@@ -149,10 +153,10 @@ class Home extends Component{
             </section>
             
             <section className="info">
-                <div className="container">
+                <div className="container infoInner" style = {{height:"100%"}}>
                     <div className="row sectionRow">
                         <div className="col-md-12 text-center align-self-center">
-                            <h1>Leading Service Provider</h1>
+                            <h1 style = {{color:"#d9381e"}}>Leading Service Provider</h1>
                         </div>
                     </div>
                     <div className="row sectionRow">
@@ -201,7 +205,7 @@ class Home extends Component{
                     </div>
                 </div>
             </div>
-            <div className="whatwedo">
+            <div className="whatwedo1">
             
            
             <div className="overlay">
@@ -211,7 +215,9 @@ class Home extends Component{
                             <h2 >Our Services</h2>
                         </div>
                     </div>
-                    <Carousel>
+                    <div className="row">
+                        <div className="col-md-12">
+                        <Carousel>
                         <Carousel.Item>
                         
                         <div className="homeServices">
@@ -277,6 +283,9 @@ class Home extends Component{
                             </Carousel.Item>
                            
                     </Carousel>
+                        </div>
+                    </div>
+
                 </div>
              
                 </div>
